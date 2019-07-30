@@ -2,11 +2,11 @@
 
 {% block contents %}
 <div class="container">
-
+    <br>
 
     <form method = "POST" action = "{% url 'login' %}">
         {% csrf_token %}
-        닉네임:
+        아이디:
         <br>
         <input name="username" type="text" value="">
         <br>
