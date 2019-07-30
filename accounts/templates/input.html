@@ -61,20 +61,17 @@
                 </div>
             </div>
       
-
-            <form action="{% url 'inputform' %}" method = "POST">
-                {% csrf_token %}
-                    <div class="card" style="width: 18rem; height: 7rem;">
-                        <div class="form-group">
-                            <br>                    
-                            <label>상품의 사진을 올려주세요</label>
-                            <input type="file" class="form-control-file" name='photo'>
-                        </div>
-                    </div>
-            </form>
+            <div class="card" style="width: 18rem; height: 7rem;">
+                <div class="form-group">
+                    <br>                    
+                    <label>상품의 사진을 올려주세요</label>
+                    <input type="file" class="form-control-file" name='photo'>
+                </div>
+            </div>            
 
             <br>
             <button type="submit" class="btn btn-primary">공구 등록하기</button>
+            
     </form>
 
 </div>
