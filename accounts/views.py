@@ -28,7 +28,8 @@ def inputform(request):
     inputform.explanation = request.POST['explanation']
     inputform.photo = request.POST['photo']
     inputform.save()
-    return render(request, 'board.html')
+    return redirect('board')
+    #return render(request, 'board.html')
     #return render(request, 'board.html')
     # 폼 제출 후 board.html로 가는 걸로 바꾸기
 
