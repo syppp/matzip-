@@ -10,8 +10,7 @@ def homee(request):
 
 
 def board(request):
-    boards = board.objects
-    return render(request, 'board.html',{'boards':boards})
+    return render(request, 'board.html')
 
 #detail.html 상세정보 가져오기
 def detail(request):
