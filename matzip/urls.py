@@ -11,10 +11,7 @@ urlpatterns = [
     path('detail', accounts.views.detail, name="detail"),
     path('login', accounts.views.login, name="login"),
     path('register', accounts.views.register, name="register"),
-<<<<<<< HEAD
     path('board', product.views.board, name="board"),#product->account로 바꿈
-=======
-    path('detail', product.views.board, name="detail"),
-    path('create',product.views.create, name='create')
->>>>>>> 909403ea0d39ab6b4b10a8488afee50760210fb4
+    path('detail', product.views.homee, name="detail"),
+    path('create',product.views.create, name='create'),
 ]
