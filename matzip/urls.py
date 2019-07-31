@@ -11,6 +11,6 @@ urlpatterns = [
     path('detail', accounts.views.detail, name="detail"),
     path('login', accounts.views.login, name="login"),
     path('register', accounts.views.register, name="register"),
-    path('detail', product.views.board, name="detail"),
-    path('create',product.views.create, name='create')
+    path('detail', product.views.homee, name="detail"),
+    path('create',product.views.create, name='create'),
 ]
