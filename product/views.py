@@ -12,7 +12,7 @@ def detail(request):
 
 #댓글
 def home(request):
-    comment=Comment.objects
+    comment = Comment.objects
     return render(request, 'detail.html', {'comment':comment}) 
 
 def create(request):
