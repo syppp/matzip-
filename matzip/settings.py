@@ -40,7 +40,12 @@ INSTALLED_APPS = [
     'product.apps.ProductConfig',
     'main.apps.MainConfig',
     'accounts.apps.AccountsConfig',
+    'django.contrib.sites',
+    'disqus',
+
 ]
+DISQUS_WEBSITE_SHORTNAME = 'matzip'
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

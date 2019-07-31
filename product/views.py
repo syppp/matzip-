@@ -11,10 +11,10 @@ def detail(request):
     return render(request, 'detail.html', {'input_information' : input_information})
 
 #댓글
-def home(request):
+def comment(request):
     
-    comment=Comment.objects
-    return render(request, 'detail.html', {'comment':comment}) 
+    comments=Comment.objects
+    return render(request, 'detail.html', {'comments':comments}) 
 def create(request):
     com = Comment()
     com.comment_date = timezone.datetime.now()

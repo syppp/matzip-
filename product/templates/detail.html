@@ -16,32 +16,18 @@
             <p> 계좌번호 :{{ input.account }}</p>
             <p> 입금 기한 :{{ input.date_limit }}</p>
             <p> 상품 상세 설명 : {{ input.explanation }}</p>
+            <button type="submit" class="btn btn-primary">신청하기</button>
         </div>
     {% endfor %}
 </div>
-<h1>   댓글달기 </h1>
+<h1>   댓글 </h1>
 <br>
-<div class="container">
-	<form action="{ % url 'create' %}">
-	  <h4> 닉네임:<textarea cols=40 rows=1 name="name"></textarea></h4>
-      <h4>내용: <textarea cols=40 rows=3 name="context"></textarea> <input class="btn btn-dark" type="submit" value="댓글 남기기"></h4>
-  </form>
-</div>
-<div class = "container">
-    
-    {% for c in comment.all%}
-    <!-- Single Comment -->
-    <div class="media mb-4">
-        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-        <div class="media-body">
-            <h5 class="mt-0">닉네임 : {{ c.comment_user }}</h5>
-            <h5 class="mt-0">댓글 시간 : {{ c.comment_date }}</h5>
-            <h5 class="mt-0">{{ c.comment_thumbnail_url }}</h5>
-            <h5 class="mt-0">내용 :{{ c.comment_textfield }}</h5>
-        </div>
-    </div>
-    {% endfor %}
- 
+
+
+<br/>
+<div>
+{% load disqus_tags%}
+{% disqus_show_comments %}
 </div>    
 
 
