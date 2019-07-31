@@ -1,0 +1,9 @@
+{% extends 'base.html' %}  
+
+{% for inputform in input_information.all %}
+    <div class="container">
+        <h1>{{ blo.title }}</h1>
+        <p>{{ blog.pub_date }}</p>
+        <p>{{ blog.body }}</p>
+    </div>
+{% endfor %}
