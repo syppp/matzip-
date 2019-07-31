@@ -11,5 +11,5 @@ urlpatterns = [
     path('detail', accounts.views.detail, name="detail"),
     path('login', accounts.views.login, name="login"),
     path('register', accounts.views.register, name="register"),
-    path('board', product.views.board, name="board"),
+    path('board', product.views.board, name="board"),#product->account로 바꿈
 ]

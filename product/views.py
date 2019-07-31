@@ -3,7 +3,9 @@ from accounts.models import Inputform
 from .models import Comment
 # Create your views here.
 def board(request):
+
     return render(request, 'board.html')
+
 
 #board.html 상세정보 가져오기
 def detail(request):

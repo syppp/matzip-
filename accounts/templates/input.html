@@ -5,7 +5,7 @@
 
 <div class = "container">
     <br><br>
-    <form action="{% url 'inputform' %}" method = "POST">
+    <form action="{% url 'inputform' %}" method = "POST"><!--inputform = create-->
         {% csrf_token %}
             <div class="form-row">
               <div class="form-group col-md-4">  <!--12개의 div중 4개 만큼 자리차지-->

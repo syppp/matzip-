@@ -1,0 +1,55 @@
+
+{% extends 'base.html' %}  
+
+{% block contents %}    
+
+<div class = "container">
+    <h1> 서비스 상세정보 </h1>
+    {% for input in input_information.all %}
+        <div class="container">
+            <h1>{{ input.photo }}</h1>
+            <p>{{ input.product_name }}</p>
+            <p>{{ input.loation }}</p>
+            <p>{{ input.person_num }}</p>
+            <p>{{ input.price }}</p>
+            <p>{{ input.link }}</p>
+            <p>{{ input.account }}</p>
+            <p>{{ input.date_limit }}</p>
+            <p>{{ input.explanation }}</p>
+        </div>
+    {% endfor %}
+</div>
+
+<div class = "container">
+    <h1> 댓글달기 </h1>
+    {% for comment in comments %}
+ 
+    <!-- Single Comment -->
+    <div class="media mb-4">
+        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+        <div class="media-body">
+            <h5 class="mt-0">{{ comment.comment_user }}</h5>
+            <h5 class="mt-0">{{ comment.comment_date }}</h5>
+            <h5 class="mt-0">{{ comment.comment_thumbnail_url }}</h5>
+            <h5 class="mt-0">{{ comment.comment_textfield }}</h5>
+        </div>
+    </div>
+ 
+    {% endfor %} 
+</div>    
+    {% for comment in comments %}
+ 
+    <!-- Single Comment -->
+    <div class="media mb-4">
+        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+        <div class="media-body">
+            <h5 class="mt-0">{{ comment.comment_user }}</h5>
+            <h5 class="mt-0">{{ comment.comment_date }}</h5>
+            <h5 class="mt-0">{{ comment.comment_thumbnail_url }}</h5>
+            <h5 class="mt-0">{{ comment.comment_textfield }}</h5>
+        </div>
+    </div>
+ 
+    {% endfor %} 
+
+{% endblock %}
