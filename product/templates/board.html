@@ -1,9 +1,25 @@
+
 {% extends 'base.html' %}  
 
-{% for inputform in input_information.all %}
-    <div class="container">
-        <h1>{{ blo.title }}</h1>
-        <p>{{ blog.pub_date }}</p>
-        <p>{{ blog.body }}</p>
-    </div>
-{% endfor %}
+{% block contents %}    
+
+<div class = "container">
+    <h1> 서비스 상세정보 </h1>
+    {% for input in input_information.all %}
+        <div class="container">
+            <h1>{{ input.photo }}</h1>
+            <p>{{ input.product_name }}</p>
+            <p>{{ input.loation }}</p>
+            <p>{{ input.person_num }}</p>
+            <p>{{ input.price }}</p>
+            <p>{{ input.link }}</p>
+            <p>{{ input.account }}</p>
+            <p>{{ input.date_limit }}</p>
+            <p>{{ input.explanation }}</p>
+        </div>
+    {% endfor %}
+</div>
+
+<div class = "container">
+    <h1> 댓글달기 </h1>
+{% endblock %}

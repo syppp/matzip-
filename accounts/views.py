@@ -27,7 +27,7 @@ def inputform(request):
     inputform.explanation = request.POST['explanation']
     inputform.photo = request.POST['photo']
     inputform.save()
-    return redirect('home')
+    return redirect('home') 
     # 폼 제출 후 board.html로 가는 걸로 바꾸기
 
 def detail(request):
