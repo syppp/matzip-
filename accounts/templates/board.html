@@ -1,3 +1,16 @@
 {% extends 'base.html' %}
-
+{% for inputform in inputform.all %}
+<div class = "container">
+    <h1>{{inputform.title}}</h1>
+    <p>{{inputform.product_name}}</p>
+    <p>{{inputform.location}}</p>
+    <p>{{inputform.person_num}}</p>
+    <p>{{inputform.price}}</p>
+    <p>{{inputform.link}}</p>
+    <p>{{inputform.account}}</p>
+    <p>{{inputform.date_limit}}</p>
+    <p>{{inputform.explanation}}</p>
+    <p>{{inputform.photo}}</p>
+</div>
+{% endfor %}
 {% endblock %}

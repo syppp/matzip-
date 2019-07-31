@@ -11,6 +11,10 @@ def register(request):
 def login(request): 
     return render(request, 'login.html')
 
+def board(request):
+    inputform = Inputform.objects
+    return render(request, 'board.html', {'inputform':inputform})
+
 def input(request): 
     return render(request, 'input.html')
 
@@ -27,7 +31,7 @@ def inputform(request):
     inputform.explanation = request.POST['explanation']
     inputform.photo = request.POST['photo']
     inputform.save()
-    return redirect('home') 
+    return render(request, 'board.html')
     # 폼 제출 후 board.html로 가는 걸로 바꾸기
 
 def detail(request):
@@ -63,3 +67,7 @@ def login(request):
         else: 
             return render(request, 'login.html', {'error' : 'username or password is incorrect.'})
     return render(request, 'login.html')
+
+def board(request):
+    title = request.GET['title']
+    return render(request, 'board.html', {'title': title})
