@@ -1,9 +1,17 @@
 {% extends 'base.html' %}  
 
 {% block contents %}    
- 
+
 
 <h1>보드</h1>
-넘어 와써?
+
+{% for board in boards.all %}
+    <div class="container">
+        <h1>{{board.title}}</h1>
+        <p>{{board.product_name}}</p>
+    </div>
+{% endfor %}
+
+
 
 {% endblock %}

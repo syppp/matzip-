@@ -14,5 +14,5 @@ urlpatterns = [
     path('register', accounts.views.register, name="register"),
     path('board', product.views.board, name="board"),#product->account로 바꿈
     path('detail', product.views.homee, name="detail"),
-    path('create',product.views.create, name='create'),
+    path('boardlist',product.views.boardlist,name="boardlist"),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

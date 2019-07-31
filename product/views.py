@@ -1,16 +1,29 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
+from django.utils import timezone
 from accounts.models import Inputform
 from .models import Comment
+
 # Create your views here.
 def homee(request):
-    return rener(request, 'detail.html')
+    return render(request, 'detail.html')
     
 
 #board.html
 
+def boardlist(request):
+    boardlist.title = request.GET['title']
+    boardlist.product_name = request.GET['product_name']
+    boardlist.price = request.GET['price']
+    boardlist.person_num = request.GET['person_num']
+    boardlist.save()
+    return redirect('/board/' + str(board.id))
 
 def board(request):
-    return render(request, 'board.html')
+    boards = Inputform.objects
+    return render(request, 'board.html', {'boards':boards})
+
+
+
 
 #detail.html 상세정보 가져오기
 def detail(request):
