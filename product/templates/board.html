@@ -1,12 +1,13 @@
 {% extends 'base.html' %}  
 {% block content %}
+<h1>보드</h1>
 <div class = "container">
-    {% for inputform in inputs %}
-    <p>title: {{inputform.title}}</p>
-    <p>product name: {{inputform.product_name}}</p>
-    <p>photo: {{inputform.photo}}</p>
-    <p>price: {{inputform.price}}</p>
-    <p>people: {{inputform.person_num}}</p>
+        {% for input in input_information.all %}
+        <div class="container">
+            <h1>사진: {{ input.photo }}</h1>
+            <p> 상품명: {{ input.product_name }}</p>
+            <p> 최소 인원:{{ input.person_num }}</p>
+        </div>
     {% endfor %}
 </div>
 {% endblock %}

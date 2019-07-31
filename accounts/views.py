@@ -28,7 +28,8 @@ def inputform(request):
     inputform.explanation = request.POST['explanation']
     inputform.photo = request.POST['photo']
     inputform.save()
-    return render(request, 'product/board.html')
+    return render(request, 'board.html')
+    #return render(request, 'board.html')
     # 폼 제출 후 board.html로 가는 걸로 바꾸기
 
 def detail(request):
@@ -37,7 +38,7 @@ def detail(request):
 
 def board(request):
     inputs = Inputform.objects
-    return render(request, 'board.html', {'inputs':inputs})
+    return render(request, 'board.html', {'inputs' : inputs})
 
 
 ####################################################################################################
