@@ -22,4 +22,34 @@
 
 <div class = "container">
     <h1> 댓글달기 </h1>
+    {% for comment in comments %}
+ 
+    <!-- Single Comment -->
+    <div class="media mb-4">
+        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+        <div class="media-body">
+            <h5 class="mt-0">{{ comment.comment_user }}</h5>
+            <h5 class="mt-0">{{ comment.comment_date }}</h5>
+            <h5 class="mt-0">{{ comment.comment_thumbnail_url }}</h5>
+            <h5 class="mt-0">{{ comment.comment_textfield }}</h5>
+        </div>
+    </div>
+ 
+    {% endfor %} 
+</div>    
+    {% for comment in comments %}
+ 
+    <!-- Single Comment -->
+    <div class="media mb-4">
+        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+        <div class="media-body">
+            <h5 class="mt-0">{{ comment.comment_user }}</h5>
+            <h5 class="mt-0">{{ comment.comment_date }}</h5>
+            <h5 class="mt-0">{{ comment.comment_thumbnail_url }}</h5>
+            <h5 class="mt-0">{{ comment.comment_textfield }}</h5>
+        </div>
+    </div>
+ 
+    {% endfor %} 
+
 {% endblock %}
