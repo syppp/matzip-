@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Inputform(models.Model):
     title = models.TextField()
     product_name = models.TextField()
@@ -10,4 +11,6 @@ class Inputform(models.Model):
     account = models.TextField()
     date_limit = models.DateTimeField('date published')
     explanation = models.CharField(max_length=300)
-    photo = models.FileField()
+    photo = models.ImageField(blank=True)
+    #photo = models.FileField()
+
