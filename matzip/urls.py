@@ -2,7 +2,8 @@ from django.contrib import admin
 from django.urls import path
 import accounts.views
 import product.views
-
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', accounts.views.home, name="home"),
@@ -11,6 +12,7 @@ urlpatterns = [
     path('detail', accounts.views.detail, name="detail"),
     path('login', accounts.views.login, name="login"),
     path('register', accounts.views.register, name="register"),
-    path('detail', product.views.homee, name="detail"),
+    path('board', product.views.board, name="board"),#product->account로 바꿈
+    path('detail', product.views.home, name="detail"),
     path('create',product.views.create, name='create'),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

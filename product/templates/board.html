@@ -1,0 +1,12 @@
+{% extends 'base.html' %}  
+{% block content %}
+<div class = "container">
+    {% for inputform in inputs %}
+    <p>title: {{inputform.title}}</p>
+    <p>product name: {{inputform.product_name}}</p>
+    <p>photo: {{inputform.photo}}</p>
+    <p>price: {{inputform.price}}</p>
+    <p>people: {{inputform.person_num}}</p>
+    {% endfor %}
+</div>
+{% endblock %}
