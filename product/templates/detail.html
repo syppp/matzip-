@@ -2,21 +2,42 @@
 {% extends 'base.html' %}  
 
 {% block contents %}    
-
-<div class = "container">
-    <h1> 서비스 상세정보 </h1>
+<style>
+    #board{
+        font-size : 30px;
+        border-style : double ;
+        border-color : #f9e090;
+    }
+    #detail{
+        text-align:left;
+       
+    }
+    #click{
+        text-align : right;
+    }
+    #back{
+        text-align : right;
+    }
+</style>
+<!--인원현황 넣어야할듯-->
+<div class = "container" id="detail">
+    <br><br>
+    <h1> 상품 상세정보 </h1>
     
-        <div class="container">
+        <div class="container" id="board">
             <h1>사진 :{{ boards.photo }}</h1>
+            <br>
             <p> 상품명 : {{ boards.product_name }}</p>
             <p> 수령 장소 :{{ boards.loation }}</p>
-            <p> 최소 인원 :{{ boards.person_num }}</p>
+            <p> 최소 인원 :{{ boards.person_num }}</p> 
             <p> 가격 : {{ boards.price }}</p>
             <p> 상품 링크 :{{ boards.link }}</p>
             <p> 계좌번호 :{{ boards.account }}</p>
             <p> 입금 기한 :{{ boards.date_limit }}</p>
             <p> 상품 상세 설명 : {{ boards.explanation }}</p>
-            <a href="{% url 'home'  %}">신청하기</a>
+            <a id="click" class="btn btn-warning" href="{% url 'home'  %}" role="button">신청하기</a>
+            <a id="back" class="btn btn-warning" href="{% url 'board'  %}" role="button">돌아가기</a>
+            <br>
         </div>
     
 </div>
@@ -24,7 +45,10 @@
 
 <br>
 <br>
-<br/>
+<br>
+<br>
+<br>
+<br>
 
 <div>
 <h1> 댓글 </h1>

@@ -34,7 +34,7 @@
         <span id="title">제목: {{board.title}}</span><br>
         <span id="name">총대 이름: {{board.product_name}}</span>>
         <span id="nperson">n/ {{board.person_num}}(현재인원/최대인원)</span><br>
-        <span id="more"><a href="{% url 'detail' %}">상세보기</a></span>
+        <span id="more"><a href="{% url 'detail' board.id %}">상세보기</a></span>
     </div>
 {% endfor %}
 
