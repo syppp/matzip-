@@ -1,17 +1,30 @@
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from django.utils import timezone
 from accounts.models import Inputform
 from .models import Comment
-#def homee(request,input_id):
-#input_detail = get_object_or_404(Inputform,pk=input_id)
-#return render(request, 'detail.html',{'input_detail':input_detail})
+
 
 #board.html
+
+def boardlist(request):
+    boardlist.title = request.GET['title']
+    boardlist.product_name = request.GET['product_name']
+    boardlist.price = request.GET['price']
+    boardlist.person_num = request.GET['person_num']
+    boardlist.save()
+    return redirect('/board/' + str(board.id))
+
 def board(request):
-    return render(request, 'board.html',)
+    boards = Inputform.objects
+    return render(request, 'board.html', {'boards':boards})
+
+
+
+
 #detail.html 
-def detail(request,input_id):
-    input_information = get_object_or_404(Inputform,pk=input_id)
-    return render(request, 'detail.html', {'input_information' : input_information})
+def detail(request,board_id):
+    boards = get_object_or_404(Inputform,pk=board_id)
+    return render(request, 'detail.html', {'boards' : boards})
 
 
 #댓글(사용안하는중)

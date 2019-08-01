@@ -7,15 +7,15 @@
     <h1> 서비스 상세정보 </h1>
     
         <div class="container">
-            <h1>사진 :{{ input_information.photo }}</h1>
-            <p> 상품명 : {{ input_information.product_name }}</p>
-            <p> 수령 장소 :{{ input_information.loation }}</p>
-            <p> 최소 인원 :{{ input_information.person_num }}</p>
-            <p> 가격 : {{ input_information.price }}</p>
-            <p> 상품 링크 :{{ input_information.link }}</p>
-            <p> 계좌번호 :{{ input_information.account }}</p>
-            <p> 입금 기한 :{{ input_information.date_limit }}</p>
-            <p> 상품 상세 설명 : {{ input_information.explanation }}</p>
+            <h1>사진 :{{ boards.photo }}</h1>
+            <p> 상품명 : {{ boards.product_name }}</p>
+            <p> 수령 장소 :{{ boards.loation }}</p>
+            <p> 최소 인원 :{{ boards.person_num }}</p>
+            <p> 가격 : {{ boards.price }}</p>
+            <p> 상품 링크 :{{ boards.link }}</p>
+            <p> 계좌번호 :{{ boards.account }}</p>
+            <p> 입금 기한 :{{ boards.date_limit }}</p>
+            <p> 상품 상세 설명 : {{ boards.explanation }}</p>
             <a href="{% url 'home'  %}">신청하기</a>
         </div>
     

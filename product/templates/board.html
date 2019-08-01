@@ -1,10 +1,27 @@
 {% extends 'base.html' %}  
 
 {% block contents %}    
- 
 
-<h1>보드</h1>
-넘어 와써?
+<style>
+    .boardocontainer{
+        margin: 10px;
+    }
+
+</style>
+
+
+{% for board in boards.all %}
+    <div class="boardcontainer">
+        <h1>제목: {{board.title}}</h1>
+        <p>이름: {{board.product_name}}</p>
+        <p>인원: {{board.person_num}}</p>
+        <p>사진: {{board.photo}}</p>
+        <a href="{% url 'detail' board.id %}">상세보기</a>
+        <br><br><br>
+    </div>
+{% endfor %}
+
+
 
 
 
