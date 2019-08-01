@@ -2,14 +2,12 @@
 
 {% block contents %}    
 
-<head>
-    <style>
-        .boardocontainer{
-            margin: 10px;
-        }
-    </style>
-</head>
+<style>
+    .boardocontainer{
+        margin: 10px;
+    }
 
+</style>
 
 
 {% for board in boards.all %}
@@ -17,7 +15,7 @@
         <h1>제목: {{board.title}}</h1>
         <p>이름: {{board.product_name}}</p>
         <p>인원: {{board.person_num}}</p>
-        <p>사진:</p>
+        <p>사진: {{board.photo}}</p>
         <a href="{% url 'detail' %}">상세보기</a>
         <br><br><br>
     </div>
