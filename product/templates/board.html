@@ -3,9 +3,6 @@
 {% block contents %}    
 
 <style>
-    .boardocontainer{
-        margin: 10px;
-    }
     #title{
         font-size: 30px;
     }
@@ -23,7 +20,8 @@
         font-size: 20px;
     }
     #more{
-        font-size: 20px;
+        font-size: 15px;
+        
     }
 </style>
 <br>
@@ -31,13 +29,12 @@
 <br>
 
 {% for board in boards.all %}
-    <div class="boardcontainer">
+    <div class="boardcontainer" style="border-bottom-style: dotted;border-bottom-color:lightskyblue;">
         <span id="photo"> 사진 {{board.photo}}</span>
         <span id="title">제목: {{board.title}}</span><br>
         <span id="name">총대 이름: {{board.product_name}}</span>>
-        <span id="nperson">n/ {{board.person_num}}(현재인원/최대인원)</span>
+        <span id="nperson">n/ {{board.person_num}}(현재인원/최대인원)</span><br>
         <span id="more"><a href="{% url 'detail' %}">상세보기</a></span>
-        <br><br><br>
     </div>
 {% endfor %}
 
