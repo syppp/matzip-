@@ -6,17 +6,37 @@
     .boardocontainer{
         margin: 10px;
     }
-
+    #title{
+        font-size: 30px;
+    }
+    #photo{
+        text-align: left;
+        block-size: 6cm;
+        height: 4cm;
+        border: 20px;
+        background-color: lavender;
+    }
+    #name{
+        font-size: 20px;
+    }
+    #nperson{
+        font-size: 20px;
+    }
+    #more{
+        font-size: 20px;
+    }
 </style>
-
+<br>
+<h1><center>▼ 공동 구매할 수 있는 품목들 ▼</center></h1>
+<br>
 
 {% for board in boards.all %}
     <div class="boardcontainer">
-        <h1>제목: {{board.title}}</h1>
-        <p>이름: {{board.product_name}}</p>
-        <p>인원: {{board.person_num}}</p>
-        <p>사진: {{board.photo}}</p>
-        <a href="{% url 'detail' %}">상세보기</a>
+        <span id="photo"> 사진 {{board.photo}}</span>
+        <span id="title">제목: {{board.title}}</span><br>
+        <span id="name">총대 이름: {{board.product_name}}</span>>
+        <span id="nperson">n/ {{board.person_num}}(현재인원/최대인원)</span>
+        <span id="more"><a href="{% url 'detail' %}">상세보기</a></span>
         <br><br><br>
     </div>
 {% endfor %}
