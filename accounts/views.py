@@ -11,6 +11,8 @@ def register(request):
 def login(request): 
     return render(request, 'login.html')
 
+def mypage(request): 
+    return render(request, 'mypage.html')
 
 def input(request): 
     return render(request, 'input.html')
