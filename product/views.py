@@ -19,8 +19,6 @@ def board(request):
     return render(request, 'board.html', {'boards':boards})
 
 
-
-
 #detail.html 
 def detail(request,board_id):
     boards = get_object_or_404(Inputform,pk=board_id)

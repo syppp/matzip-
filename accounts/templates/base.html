@@ -17,46 +17,60 @@
 
 
 </head>
+<style>
+  #title{
+    font-size : 50px;
+    color : white;
+    font-weight : bold;
+  }
+  #subtitle{
+    font-size : 20px;
+    font-style : italic;
+  }
 
+  #grad {
+  background-image: linear-gradient(to right, red , #ffd013);
+}
+</style>
 <body>
   {% load staticfiles %}
-    <nav class="navbar navbar-light" style="background-color: #fdf8e3;"> 
-        <a class="navbar-brand" href="{% url 'home' %}">
+    <nav class="navbar navbar-light" id="grad"> 
+        <a class="navbar-brand" href="{% url 'home' %}" id="title">
           <!--로고 이미지 넣기 ... 너무 작은가?-->
-          <img src="#" width="30" height="30" class="d-inline-block align-top" alt="">
+          <img src="#" width="30" height="60" class="d-inline-block align-left" alt="">
           공구맛집
         </a>
         <!--서비스 한줄 소개?-->
-        <span class="navbar-text" style="margin-right: auto">
-            서비스 한 줄 소개 간단히 써놓기
+        <span class="navbar-text" style="margin-right: auto" id = "subtitle">
+            대학생을 위한 공동구매 플랫폼
         </span>
+<!--안쓸건가용..?
+<span class="navbar-text" style="margin-right: 28px">
+<a href="#">Contact Us</a>
+</span>
 
-        <span class="navbar-text" style="margin-right: 28px">
-            <a href="#">Contact Us</a>
-        </span>
+<span class="navbar-text" style="margin-right: 27px">
+<a href="#">About Us</a>
+</span>
 
-        <span class="navbar-text" style="margin-right: 27px">
-            <a href="#">About Us</a>
-        </span>
-
-        <span class="navbar-text" style="margin-right: 34px">
-            <a href="#">이용 규칙</a>
-        </span>
-
+<span class="navbar-text" style="margin-right: 34px">
+<a href="#">이용 규칙</a>
+</span>
+-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color: #fffdec;">          
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color: white;">          
           <ul class="navbar-nav mr-auto" style="text-align-last: right">
             <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'home' %}"><span style="margin-right:8px">첫 화면으로 돌아가기</span></a>
+              <a class="navbar-brand" href="{% url 'home' %}"><span style="margin-right:8px">home</span></a>
             </li>
             <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'register' %}"><span style="margin-right:8px">회원가입</span></a>
+              <a class="navbar-brand" href="{% url 'register' %}"><span style="margin-right:8px">register</span></a>
             </li>
             <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'login' %}"><span style="margin-right:8px">로그인</span></a>
+              <a class="navbar-brand" href="{% url 'login' %}"><span style="margin-right:8px">login</span></a>
             </li>
           </ul>
         </div>  
