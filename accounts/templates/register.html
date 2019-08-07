@@ -7,7 +7,7 @@
 
 <form method = "POST" action = "{% url 'register' %}">
     {% csrf_token %} 
-    닉네임:
+    아이디:
     <br>
     <input name="username" type="text" value="">
     <br>
@@ -19,7 +19,25 @@
     <br>
     <input name="password2" type="password" value="">
     <br>
+
+    닉네임:
     <br>
+    <input name="nickname" type="text" value="">
+    <br>
+    이메일:
+    <br>
+    <input name="email" type="text" value="">
+    <br>
+    핸드폰 번호:
+    <br>
+    <input name="phone_num" type="text" value="- 없이 입력">
+    <br>
+    학교:
+    <br>
+    <input name="school" type="text" value="">
+    <br>
+         
+    <br>    
     <input name="btn btn-primary" type="submit" value="회원가입 완료">
 </form>
 

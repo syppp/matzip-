@@ -1,8 +1,15 @@
 {% extends 'base.html' %}  
 
-{% block contents %}   
+{% block contents %}
+<div class="container">   
+<br><br>
+<h1>내 정보</h1> <br><br>
 
-
-
+아이디: {{user.username}}<br><br>
+닉네임: {{profile.nickname}}<br><br>
+이메일: {{profile.email}}<br><br>
+핸드폰: {{profile.phone_num}}<br><br>
+학교: {{profile.school}}
+</div>
 
 {% endblock %}

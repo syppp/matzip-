@@ -13,6 +13,7 @@ urlpatterns = [
     path('inputform', accounts.views.inputform, name="inputform"),
     path('detail/<int:board_id>/',product.views.detail, name="detail"),
     path('login', accounts.views.login, name="login"),
+    path('logout', accounts.views.logout, name="logout"),
     path('register', accounts.views.register, name="register"),
     path('board', product.views.board, name="board"),#product->account로 바꿈
     #path('detail', product.views.homee, name="detail"),
