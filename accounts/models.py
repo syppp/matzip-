@@ -11,6 +11,5 @@ class Inputform(models.Model):
     account = models.TextField()
     date_limit = models.DateTimeField('date published')
     explanation = models.CharField(max_length=300)
-    photo = models.ImageField(blank=True)
-    #photo = models.FileField()
-
+    photo = models.FileField(upload_to='inputphotos/', blank=True, null=True)
+    

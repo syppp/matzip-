@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'django.contrib.sites',
     'disqus',
+    'imagekit',
 
 ]
 DISQUS_WEBSITE_SHORTNAME = 'matzip'

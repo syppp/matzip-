@@ -5,7 +5,7 @@
 
 <div class = "container">
     <br><br>
-    <form action="{% url 'inputform' %}" method = "POST"><!--inputform = create-->
+    <form action="{% url 'inputform' %}" method = "POST" enctype="multipart/form-data"><!--inputform = create-->
         {% csrf_token %}
             <div class="form-row">
               <div class="form-group col-md-4">  <!--12개의 div중 4개 만큼 자리차지-->
@@ -67,8 +67,9 @@
                     <br>                    
                     <label>상품의 사진을 올려주세요</label>
                     <input type="file" class="form-control-file" name='photo'>
-                </div>
-            </div>            
+                </div>                   
+            </div>
+                 
             
             <br>
             <button type="submit" class="btn btn-primary">공구 등록하기</button>

@@ -33,7 +33,8 @@
 
 {% for board in boards.all %}
     <div class="boardcontainer" style="border-bottom-style: dotted;border-bottom-color:lightskyblue;">
-        <span id="photo"> 사진 {{board.photo}}</span>
+        <br>
+        <span id="photo"> <img src="{{board.photo.url}}" style="height: 150px; width: 150px;"></span>        
         <span id="title">제목: {{board.title}}</span><br>
         <span id="price">가격: {{board.price}}(원)</span>
         <span id="name">총대 이름: {{board.product_name}}</span>>
