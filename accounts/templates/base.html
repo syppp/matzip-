@@ -29,8 +29,11 @@
   }
 
   #grad {
-  background-image: linear-gradient(to right, red , #ffd013);
+    background-image: linear-gradient(to right, red , #ffd013);
 } 
+  body{
+    background-color:#f2f2f2;
+  }
 
 </style>
 <body>
@@ -45,19 +48,7 @@
         <span class="navbar-text" style="margin-right: auto" id = "subtitle">
             대학생을 위한 공동구매 플랫폼
         </span>
-<!--안쓸건가용..?
-<span class="navbar-text" style="margin-right: 28px">
-<a href="#">Contact Us</a>
-</span>
 
-<span class="navbar-text" style="margin-right: 27px">
-<a href="#">About Us</a>
-</span>
-
-<span class="navbar-text" style="margin-right: 34px">
-<a href="#">이용 규칙</a>
-</span>
--->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -71,8 +62,21 @@
               <a class="navbar-brand" href="{% url 'register' %}"><span style="margin-right:8px">register</span></a>
             </li>
             <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'login' %}"><span style="margin-right:8px">login</span></a>
+              <a class="navbar-brand" href="{% url 'login' %}"><span style="margin-right:8px">login</span></a> 
+
             </li>
+            <li class="nav-item">
+              <a class="navbar-brand" href="{% url 'logout' %}"><span style="margin-right:8px">logout</span></a> 
+
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand" href="{% url 'mypage' %}"><span style="margin-right:8px">Mypage</span></a> 
+             </li>
+            
+    </a>
+</span>
+
+
           </ul>
         </div>  
 
