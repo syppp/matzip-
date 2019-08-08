@@ -3,8 +3,13 @@
 {% block contents %}    
 
 <style>
-    #title{
+    #productlist{
+        color:#ff5c33;
+    }
+    #titlee{
         font-size: 30px;
+        color:#ff5c33;
+        
     }
     #photo{
         text-align: left;
@@ -28,18 +33,20 @@
     }
 </style>
 <br>
-<h1><center>▼ 공동 구매할 수 있는 품목들 ▼</center></h1>
+<div  class="container" id="productlist">
+    <h1><center>PRODUCT LIST</center></h1>
+</div>    
 <br>
 
 {% for board in boards.all %}
-    <div class="boardcontainer" style="border-bottom-style: dotted;border-bottom-color:lightskyblue;">
+    <div class="boardcontainer" style="border-bottom-style: dotted;border-bottom-color:#ff5c33;background-color:white; margin : 20px;">
         <br>
         <span id="photo"> <img src="{{board.photo.url}}" style="height: 150px; width: 150px;"></span>        
-        <span id="title">제목: {{board.title}}</span><br>
+        <span id="titlee"> {{board.title}}</span><br>
         <span id="price">가격: {{board.price}}(원)</span>
         <span id="name">총대 이름: {{board.product_name}}</span>>
         <span id="nperson">n/ {{board.person_num}}(현재인원/최소인원)</span><br>
-        <span id="more"><a href="{% url 'detail' board.id %}">상세보기</a></span>
+        <span id="more"><a href="{% url 'detail' board.id %}">DETAIL VIEW</a></span>
     </div>
 {% endfor %}
 

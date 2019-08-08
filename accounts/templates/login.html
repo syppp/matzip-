@@ -1,21 +1,44 @@
 {% extends 'base.html' %}
 
 {% block contents %}
-<div class="container">
-    <br>
+<style>
+    #mypage{
+     color :  #ff5c33; 
+        padding : 10px;
+        text-align : center;
+}
+    #login{
+        font-size : 20px;
+        text-align: center;
+        border: 5px solid;
+        border-color :  #ff5c33;
+        position: relative;
+        top:20%;
+        margin-top:250px;
+        padding:10px;
+        width : 3000px;
+        background-color : white;
+    }
+</style>
 
+<div class="container" id ="login">
+    <br>
+    <div class="container" id="mypage">
+
+<h1>LOGIN</h1> 
+</div>
     <form method = "POST" action = "{% url 'login' %}">
         {% csrf_token %}
-        아이디:
+        ID
         <br>
         <input name="username" type="text" value="">
         <br>
-        비밀번호:
+        PASSWORD
         <br>
         <input name="password1" type="password" value="">
         <br>
         <br>
-        <input name="btn btn-primary" type="submit" value="로그인">
+        <input name="btn btn-primary" type="submit" value="LOGIN">
     </form>
 
 
