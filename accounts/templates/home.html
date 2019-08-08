@@ -5,40 +5,36 @@
 
 <style>
  
-
     #letter{
         text-align : center;
         
     }
+    img{
+        border-radius :20px;
+        width : 1300px;
+        position:absolute;
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+        margin:auto;
+        
+    }
+    
 </style>
+<section>
 <div class="container" id = "container">
 
 <br><br><br><br>
 
 
-<!--총대 이미지 넣기-->
 <span>
     <a href="{% url 'input' %}" style="margin-left: 85px" >
-        <img src="https://cdn.pixabay.com/photo/2017/12/26/09/15/woman-3040029_960_720.jpg"  alt="">
-        <h1 id = "letter">공동구매 글쓰기</h1>  <!--이미지 넣고 이 줄 지우기,임시이름-->
+   <img src="https://postfiles.pstatic.net/MjAxOTA4MDhfNzEg/MDAxNTY1MjY0MzE0NDIx.webUOEM_5mbDhptGVb1vju2ampvVtUXAhTYpiRFiLQAg.ubVhAkj3yJTdXQ-xgYngTanRDlz1xmNmbQQgNaPB2zgg.PNG.p1645/%EC%8B%9C%EC%9E%91.png?type=w580"  alt="이미지"> 
+         
     </a>
 </span>
 
-<span>
-    <a href="{% url 'mypage' %}"  > 
-        
-        <h1 id = "letter">MY PAGE</h1>  <!--style="margin-left: 85px"-->
-    </a>
-</span>
-
-<!--참여 이미지 넣기
-<span>
-    <a href="{% url 'board' %}" style="margin-left: 280px">
-        <img src="#" width="330" height="330" alt="">
-        <h1>공구 참가자</h1>  
-    </a>
-</span>-->
-    
 </div>
-
+</section>
 {% endblock %}

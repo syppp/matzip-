@@ -1,12 +1,13 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User 
+
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    nickname = models.TextField()
-    email = models.TextField()
-    phone_num = models.TextField()
-    school = models.TextField()
+    nickname = models.TextField(blank=True)
+    email = models.TextField(blank=True)
+    phone_num = models.TextField(blank=True)
+    school = models.TextField(blank=True)
 
 
 class Inputform(models.Model):
