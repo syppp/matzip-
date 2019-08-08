@@ -11,10 +11,6 @@ def register(request):
 def login(request): 
     return render(request, 'login.html')
 
-def mypage(request, user_id):
-    mypage = get_object_or_404(Profile, pk = user_id)
-    return render(request, 'mypage.html', {'profile': mypage})
-
 def input(request): 
     return render(request, 'input.html')
 
@@ -71,4 +67,11 @@ def login(request):
 def logout(request):   
     auth.logout(request)         
     return redirect('home')
-   
+
+def mypage(request):     
+    user_now = request.user
+    a = user_now.id
+    mypage = User.objects.get(id=a)
+    return render(request, 'mypage.html', {'user': mypage})
+    
+
