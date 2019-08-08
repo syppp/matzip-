@@ -67,7 +67,7 @@ def login(request):
             return render(request, 'login.html', {'error' : '아이디 혹은 비밀번호가 일치하지 않습니다.'})
     return render(request, 'login.html')  
 
-def logout(request):   
+def logout(request):
     auth.logout(request)         
     return redirect('home')
 
