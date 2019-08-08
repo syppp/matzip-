@@ -3,6 +3,10 @@
 {% block contents %}    
 
 <style>
+    #list{
+        padding: 10px;
+        list-style: none;
+    }
     #productlist{
         color:#ff5c33;
     }
@@ -40,14 +44,15 @@
 <br>
 
 {% for board in boards.all %}
-    <div class="boardcontainer" style="border-bottom-style: dotted;border-bottom-color:#ff5c33;background-color:white; margin : 20px;">
+    <div class="boardcontainer" id ="list" style="border-bottom-style: dotted;border-bottom-color:#ff5c33;background-color:white; margin : 20px;">
         <br>
         <span id="photo"> <img src="{{board.photo.url}}" style="height: 150px; width: 150px;"></span>        
         <span id="titlee"> {{board.title}}</span><br>
         <span id="price">가격: {{board.price}}(원)</span>
         <span id="name">총대 이름: {{board.product_name}}</span>>
         <span id="nperson">n/ {{board.person_num}}(현재인원/최소인원)</span><br>
-        <span id="more"><a href="{% url 'detail' board.id %}">DETAIL VIEW</a></span>
+        <input type="button" onclick="open1()" value="window.open('detatil.html');"/>
+        <!--자바스크립트ㅈㅂㅈㅂ<span id="more"><a href="{% url 'detail' board.id %}">DETAIL VIEW</a></span>-->
     </div>
 {% endfor %}
 
