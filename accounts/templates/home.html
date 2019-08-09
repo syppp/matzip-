@@ -21,6 +21,7 @@
         left: 0;
         min-width: 100%;
         min-height: 100%;
+        background-size:cover;
     }
     img{
         width : 1300px;
@@ -37,23 +38,19 @@
 
 
 </style>
-<section>
-<div class="container" id = "container">
+<body>
 
-<br><br><br><br>
-
-
-<span>
     {% load static %}
     <!--
     <a href="{% url 'input' %}" style="margin-left: 85px" >
     <img src="{% static 'shopping.png' %}" alt="이미지"> 
     
-
+<img src= "{% static 'shopping.jpg' %}" id="bg" alt="">
     </a>-->
-    <img src= "{% static 'shopping.jpg' %}" id="bg" alt="">
-</span>
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+    
 
-</div>
-</section>
+
+</body>
+
 {% endblock %}
