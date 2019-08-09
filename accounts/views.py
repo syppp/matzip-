@@ -63,7 +63,7 @@ def login(request):
         if user is not None: 
             auth.login(request, user)
             return redirect('home')         
-        else:                              
+        else:                                          
             return render(request, 'login.html', {'error' : '아이디 혹은 비밀번호가 일치하지 않습니다.'})
     return render(request, 'login.html')  
 
