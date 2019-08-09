@@ -50,48 +50,23 @@
             대학생을 위한 공동구매 플랫폼
         </span>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
-
-
-
-
+        </button>-->
 
         {% if user.is_active %}
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color: white;">          
-          <ul class="navbar-nav mr-auto" style="text-align-last: right">
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'home' %}"><span style="margin-right:8px">home</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'register' %}"><span style="margin-right:8px">register</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'logout' %}"><span style="margin-right:8px">logout</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'mypage' %}"><span style="margin-right:8px">Mypage</span></a> 
-             </li>
-          </ul>         
-        </div>
-        
-        
+        <button type="button" class="btn btn-dark"><a href="{% url 'home' %}" style="color:rgb(95,95,95);font-size: 0.6cm;letter-spacing: 0.1cm;">home</a></button>&nbsp;
+        <button type="button" class="btn btn-dark"><a href="{% url 'register' %}" style="color:rgb(95,95,95);font-size: 0.6cm;text-indent: 1cm;letter-spacing:0.1cm;">register</a></button>&nbsp;
+        <button type="button" class="btn btn-dark"><a href="{% url 'logout' %}" style="color:rgb(95,95,95);font-size: 0.6cm;text-indent:1cm;letter-spacing:0.1cm;">logout</a></button>&nbsp;
+        <button type="button" class="btn btn-dark"><a href="{% url 'mypage' %}" style="color:rgb(95,95,95);font-size: 0.6cm;text-indent:1cm;letter-spacing:0.1cm;">mypage</a></button>&nbsp;
+
+
         {% else %}
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color: white;">          
-          <ul class="navbar-nav mr-auto" style="text-align-last: right">
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'home' %}"><span style="margin-right:8px">home</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'register' %}"><span style="margin-right:8px">register</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'login' %}"><span style="margin-right:8px">login</span></a>
-            </li>
-          </ul>         
-        </div>
+        <button type="button" class="btn btn-dark"><a href="{% url 'home' %}" style="color:rgb(95,95,95);font-size: 0.6cm;letter-spacing: 0.1cm;">home</a></button>&nbsp;
+        <button type="button" class="btn btn-dark"><a href="{% url 'register' %}" style="color:rgb(95,95,95);font-size: 0.6cm;text-indent: 1cm;letter-spacing:0.1cm;">register</a></button>&nbsp;
+        <button type="button" class="btn btn-dark"><a href="{% url 'login' %}" style="color:rgb(95,95,95);font-size: 0.6cm;text-indent:1cm;letter-spacing:0.1cm;">login</a></button>&nbsp;
         {% endif %}
+
 
     </nav> 
 {%  block contents %}

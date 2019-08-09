@@ -2,60 +2,67 @@
 
 {% block contents %}
 <style>
- #mypage{
+ #register{
      color :  #ff5c33; 
         padding : 10px;
         text-align : center;
 }
+#form{
+    text-align: left;
+    position: relative;    
+    margin-left:350px;
+    padding:10px;
+    
+}
     #reg{
-        font-size : 20px;
+        font-size : 24px;
         text-align: center;
         border: 5px solid;
         border-color :  #ff5c33;
         position: relative;
         top:20%;
-        margin-top:250px;
+        margin-top:150px;
         padding:10px;
         width : 3000px;
         background-color : white;
     }
 </style>
-<div class="container" id = "reg">
+
+<div class="container" id = "reg"> <!-- 겉에 빨간 애-->
     <br>
 
-<div class="container" id="mypage">
+    <div class="container" id="register">
+    <h1>REGISTER</h1> <br><br>
+    </div>
 
-<h1>REGISTER</h1> 
-</div>
-<form method = "POST" action = "{% url 'register' %}">
+<form method = "POST" action = "{% url 'register' %}" id ="form">
     {% csrf_token %} 
-    아이디:
-    <br>
+    아이디:    
     <input name="username" type="text" value="">
-    <br>
+    <br><br>
     비밀번호:
-    <br>
+   
     <input name="password1" type="password" value="">
-    <br>
+    <br><br>
     비밀번호 확인:
-    <br>
+  
     <input name="password2" type="password" value="">
-    <br>
+    <br><br>
 
     닉네임:
-    <br>
+
     <input name="nickname" type="text" value="">
-    <br>
+    <br><br>
     이메일:
-    <br>
+  
     <input name="email" type="text" value="">
-    <br>
+    <br><br>
     핸드폰 번호:
-    <br>
+  
     <input name="phone_num" type="text" value="- 없이 입력">
-    <br>
+    <br><br>
     학교:
-    <br>
+ 
     <input name="school" type="text" value="">
     <br>
          
@@ -63,7 +70,7 @@
     <input name="btn btn-primary" type="submit" value="회원가입 완료" onclick="alert('회원가입이 완료되었습니다.');"/>
 </form>
 
-    <br> {{error}} <br>
+     {{error}} <br>
 
 </div>
 {% endblock %}
