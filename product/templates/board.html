@@ -6,58 +6,69 @@
     #list{
         padding: 10px;
         list-style: none;
+        width : 75vw !important;
+        margin-left: -37%;
     }
     #productlist{
         color:#ff5c33;
     }
     #titlee{
-        font-size: 30px;
+        font-size: 60px;
         color:#ff5c33;
         
     }
     #photo{
         text-align: left;
-        block-size: 6cm;
-        height: 4cm;
-        border: 20px;
-        background-color: lavender;
     }
-    #name{
-        font-size: 20px;
+    
+    #a{
+        margin-top: 6%;
+        font-size: 55px;
+        text-align: left;
+
     }
-    #nperson{
-        font-size: 20px;
-    }
-    #price{
-        font-size: 20px;
-    }
-    #more{
-        font-size: 15px;
-        
-    }
+
+    #b{
+        font-size: 42px;
+        text-align: left;
+
+        }
+    #c{
+        margin-top: 67%;
+        margin-left: 50%;
+    }    
 </style>
+
 <div class="container">
-<br>
-<div  class="container" id="productlist">
-    <h1><center>PRODUCT LIST</center></h1>
-</div>    
+    <div  class="container" id="productlist">
+            <br><br>
+        <h1><center>PRODUCT LIST</center></h1>
+    </div>    
 <br>
 
 {% for board in boards.all %}
-    <div class="boardcontainer" id ="list" style="border-bottom-style: dotted;border-bottom-color:#ff5c33;background-color:white; margin : 20px;">
+    <div class="form-row" id = "list" style="border-bottom-style: dotted;border-bottom-color:#ff5c33;background-color:white;">
         <br>
-        <span id="photo"> <img src="{{board.photo.url}}" style="height: 150px; width: 150px;"></span>        
-        <span id="titlee"> {{board.title}}</span><br>
-        <span id="price">가격: {{board.price}}(원)</span>
-        <span id="name">총대 이름: {{board.product_name}}</span>>
-        <span id="nperson">n/ {{board.person_num}}(현재인원/최소인원)</span><br>
-        <input type="button" onclick="open1()" value="window.open('detatil.html');"/>
-        <!--자바스크립트ㅈㅂㅈㅂ<span id="more"><a href="{% url 'detail' board.id %}">DETAIL VIEW</a></span>-->
+        <div class="form-group col-md-4" id="photo"><img src="{{board.photo.url}}" style="height:42vh; width:22vw;"></div>        
+        <div class="form-group col-md-4">
+            <div class="form-row" id="a" style="background-color:#ffebe6" >   
+            {{board.title}} <br>
+            </div>
+            <div class="form-row" id="b">
+                    <br>  
+            가격: {{board.price}}(원)<br>
+            총대 이름: {{board.product_name}}<br>
+            현재 {{board.person_num}} 명 <br>
+            </div>
+        </div>
+        <div class="form-group col-md-4" id="b">
+        <a href="{% url 'detail' board.id %}"><button id = "c">DETAIL VIEW</button></a>
+        </div>        
     </div>
 {% endfor %}
-
-
 </div>
+<br>
+
 
 
 

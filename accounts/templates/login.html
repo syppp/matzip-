@@ -28,16 +28,35 @@
 </div>
     <form method = "POST" action = "{% url 'login' %}">
         {% csrf_token %}
+<<<<<<< HEAD
         ▶ID :
         <input name="username" type="text" value="" style="background-color: #ffebe6">
+=======
+        ID :
+        <input name="username" type="text" value="" >
+>>>>>>> 2b1cdf7bd861cf7431e217f4b79806463d7503ff
         <br><br>
         ▶PASSWORD :
         <input name="password1" type="password" value="">
         <br><br>
         <br>
+<<<<<<< HEAD
         <button type="submit" value="LOGIN" class="btn btn-outline-warning" style="color: #ff5c33">submit</button>
         
         <!--<input name="btn btn-primary" type="submit" value="LOGIN">-->
+=======
+        <input name="btn btn-primary" type="submit" value="LOGIN" onclick="
+        if(user.querySelector('#night_day').value === 'night'){
+          document.querySelector('body').style.backgroundColor = 'black';
+          document.querySelector('body').style.color = 'white';
+          document.querySelector('#night_day').value = 'day';
+        } else {
+          document.querySelector('body').style.backgroundColor = 'white';
+          document.querySelector('body').style.color = 'black';
+          document.querySelector('#night_day').value = 'night';
+        }
+      ">
+>>>>>>> 2b1cdf7bd861cf7431e217f4b79806463d7503ff
         <br><br>
     </form>
 
