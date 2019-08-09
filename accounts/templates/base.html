@@ -75,6 +75,27 @@
 
 
     </nav> 
+    <div class="container">
+
+        {% if messages %}
+    
+            {% for message in messages %}
+    
+                {% if message.tags == 'success' %}
+    
+                    <div class="p-3 mt-2 mb-2 border border-success text-success rounded text-center">{{ message }} </div>
+    
+                {% else %}
+    
+                    <div class="p-3 mt-2 mb-2 border border-danger text-danger rounded text-center ">{{ message }} </div>
+    
+                {% endif %}
+    
+            {% endfor %}
+    
+        {% endif %}
+    
+        </div>
 {%  block contents %}
 
 {% endblock %}
