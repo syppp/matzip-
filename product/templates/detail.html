@@ -10,56 +10,77 @@
     }
     #board{
         font-size : 30px;
-        font-size : 30px;
         border: 5px solid;
         border-color :  #ff5c33;
         position: relative;
-        top:20%;
-        margin-top:70px;
+        margin-top:10%;
+        margin-left:-30%;
         padding:10px;
-        width : 3000px;
+        width:70vw;
         background-color : white;
     }
     #detail{
         text-align:left;
        
     }
-    #click{
-        text-align : right;
-    }
-    #back{
-        text-align : right;
-    }
     #comment{
         color :  #ff5c33;
         text-align: center;
     }
+<<<<<<< HEAD
      *{
      font-family: 'Noto Sans KR', sans-serif;
      font-weight:bold;
  }
+=======
+    #e{
+        margin-left: 89%;
+        margin-bottom: 1%;    
+
+    }
+    #d{ 
+        font-size: 37px;
+        margin-top:1%;
+    }
+    #i{
+        margin-left: 3%;
+        font-size: 37px;
+    }
+>>>>>>> 9fded854863c3b049e9adbc0b4c69415c9b2069f
 </style>
-<!--인원현황 넣어야할듯-->
 <div class="container" id="detailview">
     <br>
     <h1> DETAIL VIEW </h1>
 </div>    
 <div class = "container" id="detail">
     
-        <div class="container" id="board">
-            <img src="{{boards.photo.url}}" style="height: 200px; width: 200px;">
-            <br>
-            <p> 상품명 : {{ boards.product_name }}</p>
-            <p> 수령 장소 :{{ boards.loation }}</p>
-            <p> 최소 인원 :{{ boards.person_num }}</p> 
-            <p> 가격 : {{ boards.price }}</p>
-            <p> 상품 링크 :{{ boards.link }}</p>
-            <p> 계좌번호 :{{ boards.account }}</p>
-            <p> 입금 기한 :{{ boards.date_limit }}</p>
-            <p> 상품 상세 설명 : {{ boards.explanation }}</p>
-            
-            <a id="back" class="btn btn-warning" href="{% url 'board'  %}" role="button">돌아가기</a>
-            <br>
+        <div id="board">
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <img src="{{boards.photo.url}}" style="height:42vh; width:22vw;">
+                </div>
+                <div class="form-group col-md-8" id = "d">
+                    <p> 상품명 : {{ boards.product_name }}</p>
+                    <p> 수령 장소 :{{ boards.loation }}</p>
+                    <p> 최소 인원 :{{ boards.person_num }}</p> 
+                    <p> 가격 : {{ boards.price }}</p>
+                    <p> 상품 링크 :{{ boards.link }}</p>
+                    <p> 계좌번호 :{{ boards.account }}</p>
+                    <p> 입금 기한 :{{ boards.date_limit }}</p>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <p id = "i"> 상품 상세 설명 : {{ boards.explanation }}</p>
+                <br>
+            </div>
+
+            <div>    
+                <a href="{% url 'board' %}"><button id = "e">돌아가기</button></a>
+                <br>
+            </div>
+        
         </div>
     
 </div>
