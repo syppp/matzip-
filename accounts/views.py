@@ -1,3 +1,4 @@
+from django.contrib import auth, messages
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Inputform, Profile
@@ -33,7 +34,7 @@ def inputform(request):
 ####################################################################################################
 
 from django.contrib.auth.models import User
-from django.contrib import auth
+from django.contrib import auth, messages
 
 
 def register(request):    
@@ -54,18 +55,37 @@ def register(request):
                 return redirect('home')
     return render(request, 'register.html')
 
+def login(request):
 
-def login(request): 
     if request.method == 'POST':
+
+        # DB에서 유저 정보 조회
+
         username = request.POST.get('username')
+
         password = request.POST.get('password1')
-        user = auth.authenticate(request, username = username, password = password)
-        if user is not None: 
+
+        user = auth.authenticate(request, username=username, password=password)
+
+
+
+        if user is not None:
+
             auth.login(request, user)
-            return redirect('home')         
-        else:                              
-            return render(request, 'login.html', {'error' : '아이디 혹은 비밀번호가 일치하지 않습니다.'})
-    return render(request, 'login.html')  
+
+            messages.add_message(request, messages.SUCCESS, '환영합니다!')
+
+            return redirect('home')
+
+        else:
+
+            messages.add_message(request, messages.ERROR, '로그인에 실패하였습니다. 아이디 또는 비밀번호를 확인해주세요.')
+
+            return render(request, 'login.html')
+
+
+
+    return render(request, 'login.html')
 
 def logout(request):
     auth.logout(request)         
