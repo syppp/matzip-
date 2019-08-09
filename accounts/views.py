@@ -72,7 +72,6 @@ def login(request):
         if user is not None:
 
             auth.login(request, user)
-<<<<<<< HEAD
 
             messages.add_message(request, messages.SUCCESS, '환영합니다!')
 
@@ -87,12 +86,6 @@ def login(request):
 
 
     return render(request, 'login.html')
-=======
-            return redirect('home')         
-        else:                                          
-            return render(request, 'login.html', {'error' : '아이디 혹은 비밀번호가 일치하지 않습니다.'})
-    return render(request, 'login.html')  
->>>>>>> 2b1cdf7bd861cf7431e217f4b79806463d7503ff
 
 def logout(request):
     auth.logout(request)         

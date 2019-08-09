@@ -4,56 +4,31 @@
 {% block contents %}
 
 <style>
-    *{
-        margin-left: 0;
-    }
-    body, html{
-        margin: 0;
-        padding: 0;
-        height: 100%;
-    }
-    #letter{
-        text-align : center;        
-    }
-    #bg{
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-width: 100%;
-        min-height: 100%;
-    }
-    img{
-        width : 1300px;
-        position:absolute;
-        margin-left : -6%;
-        margin-right : 5%;
-        margin-bottom : 10%;
-        margin-top:5%;
+      
+    #container {
+    background: url('../static/shopping.jpg') no-repeat;
+    background-size: cover;
+    height: calc(100vh - 72px);
+    bottom: 0;
     }
     
-    section{        
-        
-    }
-
-
 </style>
-<section>
-<div class="container" id = "container">
-
-<br><br><br><br>
 
 
-<span>
+<div id="container">
     {% load static %}
     <!--
     <a href="{% url 'input' %}" style="margin-left: 85px" >
     <img src="{% static 'shopping.png' %}" alt="이미지"> 
     
-
     </a>-->
-    <img src= "{% static 'shopping.jpg' %}" id="bg" alt="">
-</span>
-
+    <!-- <img src= "{% static 'shopping.jpg' %}" id="bg" alt=""> -->
+    <center>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <button type="button" class="btn btn-warning"><a style="font-size: 120%; color: white;" href="{% url 'input' %}">총대 등록하기</a></button>
+    <button type="button" class="btn btn-warning"><a style="font-size: 120%; color: white;" href="{% url 'board' %}">보드로 가기</a></button>
+    </center>   
+    
 </div>
-</section>
+
 {% endblock %}
