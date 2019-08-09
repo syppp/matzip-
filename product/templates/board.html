@@ -3,17 +3,21 @@
 {% block contents %}    
 
 <style>
+ *{
+     font-family: 'Noto Sans KR', sans-serif;
+     font-weight:bold;
+ }
     #list{
-        padding: 10px;
+        padding: 1%;
         list-style: none;
-        width : 75vw !important;
+        width : 170%;
         margin-left: -37%;
     }
     #productlist{
         color:#ff5c33;
     }
     #titlee{
-        font-size: 60px;
+        font-size: 160%;
         color:#ff5c33;
         
     }
@@ -23,13 +27,13 @@
     
     #a{
         margin-top: 6%;
-        font-size: 55px;
+        font-size: 350%;
         text-align: left;
 
     }
 
     #b{
-        font-size: 42px;
+        font-size: 250%;
         text-align: left;
 
         }
@@ -61,7 +65,7 @@
             현재 {{board.person_num}} 명 <br>
             </div>
         </div>
-        <div class="form-group col-md-4" id="b">
+        <div class="form-group col-md-4" >
         <a href="{% url 'detail' board.id %}"><button id = "c">DETAIL VIEW</button></a>
         </div>        
     </div>
