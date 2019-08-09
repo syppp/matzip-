@@ -8,7 +8,7 @@
         text-align : center;
 }
     #login{
-        font-size : 20px;
+        font-size : 29px;
         text-align: center;
         border: 5px solid;
         border-color :  #ff5c33;
@@ -25,20 +25,19 @@
     <br>
     <div class="container" id="mypage">
 
-<h1>LOGIN</h1> 
+<h1>LOGIN</h1>  <br><br>
 </div>
     <form method = "POST" action = "{% url 'login' %}">
         {% csrf_token %}
-        ID
-        <br>
+        ID :
         <input name="username" type="text" value="">
-        <br>
-        PASSWORD
-        <br>
+        <br><br>
+        PASSWORD :
         <input name="password1" type="password" value="">
-        <br>
+        <br><br>
         <br>
         <input name="btn btn-primary" type="submit" value="LOGIN">
+        <br><br>
     </form>
 
 

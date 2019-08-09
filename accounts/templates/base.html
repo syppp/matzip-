@@ -19,12 +19,12 @@
 </head>
 <style>
   #title{
-    font-size : 50px;
+    font-size : 55px;
     color : white;
     font-weight : bold;
   }
   #subtitle{
-    font-size : 20px;
+    font-size : 35px;
     font-style : italic;
   }
 
@@ -34,64 +34,45 @@
   body{
     background-color:#f2f2f2;
   }
-
+  a:link, a:visited {
+    color: white;
+    font-size : 39px;
+  }
+  a:active, a:hover{
+    text-decoration:unset
+  }
+ 
 </style>
 <body>
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   {% load staticfiles %}
     <nav class="navbar navbar-light" id="grad"> 
         <a class="navbar-brand" href="{% url 'home' %}" id="title">
-          <!--로고 이미지 넣기 ... 너무 작은가?-->
+          
           <img src="#" width="30" height="60" class="d-inline-block align-left" alt="">
           공구맛집
         </a>
-        <!--서비스 한줄 소개?-->
         <span class="navbar-text" style="margin-right: auto" id = "subtitle">
             대학생을 위한 공동구매 플랫폼
         </span>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-
-
-
-
         {% if user.is_active %}
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color: white;">          
-          <ul class="navbar-nav mr-auto" style="text-align-last: right">
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'home' %}"><span style="margin-right:8px">home</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'register' %}"><span style="margin-right:8px">register</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'logout' %}"><span style="margin-right:8px">logout</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'mypage' %}"><span style="margin-right:8px">Mypage</span></a> 
-             </li>
-          </ul>         
+        <div id ="nav">
+          <a href="{% url 'home' %}" >home     </a>&nbsp;
+          <a href="{% url 'register' %}">     register     </a>&nbsp;
+          <a href="{% url 'logout' %}">     logout     </a>&nbsp;
+          <a href="{% url 'mypage' %}">     mypage     </a>&nbsp;
         </div>
-        
-        
+
+
         {% else %}
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color: white;">          
-          <ul class="navbar-nav mr-auto" style="text-align-last: right">
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'home' %}"><span style="margin-right:8px">home</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'register' %}"><span style="margin-right:8px">register</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'login' %}"><span style="margin-right:8px">login</span></a>
-            </li>
-          </ul>         
+        <div id="nav">
+          <a href="{% url 'home' %}" >    home    </a>&nbsp;
+          <a href="{% url 'register' %}">    register    </a>&nbsp;
+          <a href="{% url 'login' %}" >    login    </a>&nbsp;
         </div>
         {% endif %}
+
 
     </nav> 
 {%  block contents %}
