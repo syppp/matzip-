@@ -67,10 +67,23 @@
     <br>
          
     <br>    
-    <input name="btn btn-primary" type="submit" value="회원가입 완료" onclick="alert('회원가입이 완료되었습니다.');"/>
+    <input name="btn btn-primary" type="submit" value="회원가입 완료">
 </form>
+<<<<<<< HEAD
 
      {{error}} <br>
+=======
+    {% if 'error' != None %}
+    <script>
+    alert("성공");
+    </script>
+    {% else %}
+    <script>
+        alert("가타염!")
+    </script>
+    {% endif %}
+    <!--<br> {{error}} <br>-->
+>>>>>>> c965a64c3805f61ec88bbdf3e68f7ea42933175d
 
 </div>
 {% endblock %}
