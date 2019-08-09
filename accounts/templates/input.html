@@ -2,9 +2,37 @@
 
 
 {% block contents %}
+<style>
+ #detailview{
+        color :  #ff5c33; 
+        padding : 10px;
+        text-align : center;
+    }
+    #inputform{
+        font-size : 30px;
+        border: 5px solid;
+        border-color :  #ff5c33;
+        position: relative;
+        top:20%;
+        margin-top:60px;
+        padding:10px;
+        width : 3000px;
+        background-color : white;
+    }
+    #button{
+        --background:skyblue;
+    }
 
-<div class = "container">
-    <br><br>
+
+</style>
+
+<div class="container" id="detailview">
+    <br>
+    <br>
+    <h1> INPUT FORM </h1>
+</div>  
+<div class = "container" id ="inputform">
+
     <form action="{% url 'inputform' %}" method = "POST" enctype="multipart/form-data"><!--inputform = create-->
         {% csrf_token %}
             <div class="form-row">
@@ -26,13 +54,15 @@
                     <label>상품 수령 장소</label>
                     <input type="text" class="form-control-sm" name='location'>
                 </div>   
+                <br>
                 <div class="form-group col-md-4">
                     <label>최소 공구 인원</label>
                     <input type="text" class="form-control-sm" placeholder=" N 명" name='person_num'>
                 </div>
+                <br>
                 <div class="form-group col-md-4">
                     <label>가격</label>
-                    <input type="text" class="form-control-sm" placeholder=" 000 원 " name='price'>
+                    <input type="text" class="form-control-sm" placeholder=" 000 원 " name='price' />
                 </div>
             </div>
 
@@ -41,6 +71,7 @@
                     <label>상품 링크</label>
                     <input type="text" class="form-control-sm" name='link'>
                 </div>         
+                <br>
                 <div class="form-group col-md-4">
                     <label>계좌 번호</label>
                     <input type="text" class="form-control-sm" name='account'>
@@ -70,9 +101,9 @@
                 </div>                   
             </div>
                  
-            
             <br>
-            <button type="submit" onclick="alert('공구 등록')" value="공구 등록" class="btn btn-primary">공구 등록하기</button>
+            <br>
+            <button id ="button"type="submit" onclick="alert('공구 등록완료!')" value="공구 등록" class="btn btn-warning">공구 등록하기</button>
 
     </form>
 

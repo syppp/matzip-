@@ -3,10 +3,22 @@
 
 {% block contents %}    
 <style>
+    #detailview{
+        color :  #ff5c33; 
+        padding : 10px;
+        text-align : center;
+    }
     #board{
         font-size : 30px;
-        border-style : double ;
-        border-color : #f9e090;
+        font-size : 30px;
+        border: 5px solid;
+        border-color :  #ff5c33;
+        position: relative;
+        top:20%;
+        margin-top:70px;
+        padding:10px;
+        width : 3000px;
+        background-color : white;
     }
     #detail{
         text-align:left;
@@ -18,11 +30,17 @@
     #back{
         text-align : right;
     }
+    #comment{
+        color :  #ff5c33;
+        text-align: center;
+    }
 </style>
 <!--인원현황 넣어야할듯-->
+<div class="container" id="detailview">
+    <br>
+    <h1> DETAIL VIEW </h1>
+</div>    
 <div class = "container" id="detail">
-    <br><br>
-    <h1> 상품 상세정보 </h1>
     
         <div class="container" id="board">
             <img src="{{boards.photo.url}}" style="height: 200px; width: 200px;">
@@ -35,7 +53,7 @@
             <p> 계좌번호 :{{ boards.account }}</p>
             <p> 입금 기한 :{{ boards.date_limit }}</p>
             <p> 상품 상세 설명 : {{ boards.explanation }}</p>
-            <a id="click" class="btn btn-warning" href="{% url 'home'  %}" role="button">신청하기</a>
+            
             <a id="back" class="btn btn-warning" href="{% url 'board'  %}" role="button">돌아가기</a>
             <br>
         </div>
@@ -45,13 +63,12 @@
 
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
 
-<div>
-<h1> 댓글 </h1>
+
+<div class="container" id="comment">
+
+    <h1>COMMENTS </h1>
+</div>    
 {% load disqus_tags%}
 {% disqus_show_comments %}
 

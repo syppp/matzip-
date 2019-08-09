@@ -1,10 +1,32 @@
 {% extends 'base.html' %}
 
 {% block contents %}
-<div class="container">
+<style>
+ #mypage{
+     color :  #ff5c33; 
+        padding : 10px;
+        text-align : center;
+}
+    #reg{
+        font-size : 20px;
+        text-align: center;
+        border: 5px solid;
+        border-color :  #ff5c33;
+        position: relative;
+        top:20%;
+        margin-top:250px;
+        padding:10px;
+        width : 3000px;
+        background-color : white;
+    }
+</style>
+<div class="container" id = "reg">
     <br>
 
+<div class="container" id="mypage">
 
+<h1>REGISTER</h1> 
+</div>
 <form method = "POST" action = "{% url 'register' %}">
     {% csrf_token %} 
     아이디:
@@ -38,7 +60,7 @@
     <br>
          
     <br>    
-    <input name="btn btn-primary" type="submit" value="회원가입 완료">
+    <input name="btn btn-primary" type="submit" value="회원가입 완료" onclick="alert('회원가입이 완료되었습니다.');"/>
 </form>
 
     <br> {{error}} <br>
