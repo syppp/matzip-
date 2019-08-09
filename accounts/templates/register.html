@@ -69,16 +69,8 @@
     <br>    
     <input name="btn btn-primary" type="submit" value="회원가입 완료"><br><br>
 </form>
-    {% if 'error' != None %}
-    <script>
-    alert("성공");
-    </script>
-    {% else %}
-    <script>
-        alert("가타염!")
-    </script>
-    {% endif %}
-    <!--<br> {{error}} <br>-->
+
+   {{error}}<br>
 
 </div>
 {% endblock %}

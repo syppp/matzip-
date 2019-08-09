@@ -3,26 +3,26 @@
 
 {% block contents %}
 <style>
- #detailview{
+#detailview{
         color :  #ff5c33; 
         padding : 10px;
         text-align : center;
     }
-    #inputform{
+    #ip{
         font-size : 30px;
-        border: 5px solid;
-        border-color :  #ff5c33;
+        background-color : #ffebe6;
         position: relative;
         top:20%;
-        margin-top:60px;
-        padding:10px;
-        width : 3000px;
-        background-color : white;
-    }
-    #button{
-        --background:skyblue;
+        margin-top:2%;
+        margin-right:40%;
+        width : 120% ;
+     
     }
 
+    #text{
+        width : 100%;
+        hegit: 100% ;
+    }
 
 </style>
 <title>input form</title>
@@ -35,68 +35,84 @@
 
     <form action="{% url 'inputform' %}" method = "POST" enctype="multipart/form-data"><!--inputform = create-->
         {% csrf_token %}
-            <div class="form-row">
+            <div class="form-row" id ="ip">
               <div class="form-group col-md-4">  <!--12개의 div중 4개 만큼 자리차지-->
                 <label>글 제목 </label>
-                <input type="text" class="form-control-sm" name='title'>
+                <input type="text" class="form-control-sm" name='title' id ="text">
               </div><br>
             </div>
 
-            <div class="form-row">
-              <div class="form-group col-md-4">
+            <div class="form-row" id="ip">
+              <div class="form-group col-md-4" >
                 <label>상품 이름</label>
-                <input type="text" class="form-control-sm" name='product_name'>
+                <input type="text" class="form-control-sm" name='product_name' id='box'>
               </div>
             </div>
 
-            <div class="form-row">
-                <div class="form-group col-md-4">
-                    <label>상품 수령 장소</label>
-                    <input type="text" class="form-control-sm" name='location'>
-                </div>   
-                <br>
+            <div class="form-row" id ="ip">
                 <div class="form-group col-md-4">
                     <label>최소 공구 인원</label>
-                    <input type="text" class="form-control-sm" placeholder=" N 명" name='person_num'>
+                    <input type="text" class="form-control-sm" placeholder=" N 명" name='person_num' id="box">
                 </div>
-                <br>
+            </div>
+            <div class="form-row" id ="ip">
                 <div class="form-group col-md-4">
                     <label>가격</label>
-                    <input type="text" class="form-control-sm" placeholder=" 000 원 " name='price' />
+                    <input type="text" class="form-control-sm" placeholder=" 000 원 " name='price' id='box'>
                 </div>
             </div>
 
-            <div class="form-row">
-                <div class="form-group col-md-4">
-                    <label>상품 링크</label>
-                    <input type="text" class="form-control-sm" name='link'>
-                </div>         
-                <br>
+            <div class="form-row" id ="ip">
+                 
+
                 <div class="form-group col-md-4">
                     <label>계좌 번호</label>
-                    <input type="text" class="form-control-sm" name='account'>
+                    <input type="text" class="form-control-sm" name='account ' id='box'>
                 </div>
+
+          
+                
             </div>
             
-            <div class="form-row">
+            <div class="form-row" id ="ip">
+                 
+
+               
+                <div class="form-group col-md-4">
+                        <label>상품 수령 장소</label>
+                        <input type="text" class="form-control-sm" name='location'>
+                    </div>   
+                
+            </div>
+
+            
+              <div class="form-row" id="ip">
                 <div class="form-group col-md-4">
                     <label>입금 기한</label>
                     <input type="date" class="form-control-sm" name='date_limit'>
                 </div>
+         
+            </div>
+            <div class="form-row" id="ip">
+           
+                <div class="form-group col-md-4">
+                    <label>상품 링크</label>
+                    <input type="text" class="form-control-sm" name='link' id="text">
+                </div>         
+                <br>
             </div>
 
-            <div class="form-row">
+            <div class="form-row" id = "ip">
                 <div class="form-group col-md-4">
                       <label>설명 </label>
-                      <input type="text" class="form-control-sm" name='explanation'>
+                      <input type="text" class="form-control-sm" name='explanation' id="text">
                 </div>
             </div>
             
             
-            <div class="card" style="width: 18rem; height: 7rem;">
-                <div class="form-group">
-                    <br>                    
-                    <label>상품의 사진을 올려주세요</label>
+            <div class="card" style="width: 18rem; height: 7rem;" id="ip">
+                <div class="form-group">    
+                    <br>                
                     <input type="file" class="form-control-file" name='photo'>
                 </div>                   
             </div>
