@@ -4,13 +4,25 @@
 {% block contents %}
 
 <style>
- 
+    *{
+        margin-left: 0;
+    }
+    body, html{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
     #letter{
-        text-align : center;
-        
+        text-align : center;        
+    }
+    #bg{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
     }
     img{
-        
         width : 1300px;
         position:absolute;
         margin-left : 10%;
@@ -33,10 +45,13 @@
 
 <span>
     {% load static %}
+    <!--
     <a href="{% url 'input' %}" style="margin-left: 85px" >
     <img src="{% static 'shopping.png' %}" alt="이미지"> 
-         
-    </a>
+    
+
+    </a>-->
+    <img src= "{% static 'shopping.jpg' %}" id="bg" alt="">
 </span>
 
 </div>
