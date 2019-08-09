@@ -16,20 +16,14 @@
         text-align : center;        
     }
     #bg{
-        position: fixed;
         top: 0;
         left: 0;
         min-width: 100%;
         min-height: 100%;
-        background-size:cover;
+        background-size: cover;
     }
     img{
         width : 1300px;
-        position:absolute;
-        margin-left : -6%;
-        margin-right : 5%;
-        margin-bottom : 10%;
-        margin-top:5%;
     }
     
 
@@ -43,11 +37,12 @@
     <img src="{% static 'shopping.png' %}" alt="이미지"> 
     
     </a>-->
-    <!-- <img src= "{% static 'shopping.jpg' %}" id="bg" alt=""> -->
-    <center>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <link rel="stylesheet" href="{% static 'main.css'%}">
+    <center><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <span style="background-color:peachpuff">
     <button type="button" class="btn btn-warning"><a style="font-size: 120%; color: white;" href="{% url 'input' %}">총대 등록하기</a></button>
     <button type="button" class="btn btn-warning"><a style="font-size: 120%; color: white;" href="{% url 'board' %}">보드로 가기</a></button>
+    </span>
     </center>   
     
 </div>
